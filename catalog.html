@@ -112,15 +112,26 @@
     <section>
       <h2>Фильтр:<h2>
       <form action="https://echo.htmlacademy.ru" method="get">
-        <div>
-          <h3>Цена:</h3>
-          <div>
-            Ползунок
+        <fieldset class="filter-item">
+          <legend class="visually-hidden">Стоимость:</legend>
+          <div class="range-filter">
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="toggle toggle-min"></div>
+              <div class="toggle toggle-max"></div>
+            </div>
+            <div class="price-controls">
+              <label class="min-price">
+                от <input type="number" name="min-price" value="0">
+              </label>
+              <label class="max-price">
+                до <input type="number" name="max-price" value="30000">
+              </label>
+            </div>
           </div>
-          <span>0</span>
-          <span>—</span>
-          <span>30000</span>
-        </div>
+        </fieldset>
 
         <fieldset>
           <legend>Производители:</legend>
