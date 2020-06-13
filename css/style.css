@@ -1,0 +1,619 @@
+:root {
+  --basic-red: #EE3643;
+  --basic-green: #63A63E;
+  --basic-gray: #3D546F;
+  --basic-greylight: #C5C5C5;
+  --basic-background: #F1F5F7;
+  --basic-white: #ffffff;
+  --basic-black: #000000;
+
+  --special-yellow: #FFBF47;
+  --special-blue: #3BBCE3;
+  --special-lilac: #DC91D8;
+  --special-greenlight: #8ED78F;
+  --special-yellowlight: #FFD180;
+  --special-success: #5FBB2D;
+  --special-warning: #FFBF47;
+  --special-error: #BA2732;
+  --special-light-gray: #EAEAEA;
+}
+
+body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  background-color: var(--basic-white);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+input::-moz-placeholder { color: var(--basic-white); }
+input::-webkit-input-placeholder {color: var(--basic-white);}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Хэдер
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+/*==============================================================================
+
+Верхняя панель
+
+==============================================================================*/
+
+.main-header {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  height: 320px;
+  background-color: var(--basic-background);
+}
+
+.header-top {
+  display: flex;
+  background-color: #293449;
+}
+
+.logo-technomart {
+  display: inline-block;
+  background-color: var(--basic-red);
+  width: 220px;
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+}
+
+.logo-technomart-header {
+  height: 47px;
+}
+
+.logo-technomart-header:active {
+  background-color: var(--special-error);
+  border-bottom-color: var(--special-error);
+}
+
+.search {
+  display: inline-block;
+  font: inherit;
+  background-color: transparent;
+  height: 42px;
+  width:270px;
+  border: none;
+}
+
+.wish-list, .cart, .order {
+  display: inline-block;
+  font: inherit;
+  height: 42px;
+  width:150px;
+  background-color: transparent;
+  color: var(--basic-white)
+}
+
+.order {
+  background-color: var(--basic-green);
+}
+
+.wish-list:hover, .cart:hover {
+
+}
+
+.wish-list:active, .cart:active {
+  background: #161D29;
+  color: rgba(255,255,255,0.5);
+}
+
+.order:hover {
+  background-color: var(--special-success);
+  color: var(--basic-white)
+}
+
+.order:active {
+  color: rgba(255,255,255,0.5);
+}
+
+.search:hover {
+
+}
+
+.search:active {
+  opacity: 0.5;
+}
+
+.search:focus {
+  background-color: var(--basic-white);
+  opacity: 1;
+}
+
+/*==============================================================================
+
+Содержание Хедера
+
+==============================================================================*/
+
+.header-content {
+  display: flex;
+  width: 940px;
+}
+
+.short-about {
+  font-style: italic;
+  color: var(--basic-red);
+  font-size: 16px;
+  line-height: 23px;
+}
+
+.contacts-short {
+  display: grid;
+  width: 270px;
+}
+
+.address {
+  font: inherit;
+  font-style: normal;
+}
+
+.phone {
+  font: inherit;
+  color: inherit;
+}
+
+.phone-header {
+  display: inline-block;
+  width: 270px;
+  height: 45px;
+  background: transparent;
+  border: 3px solid #FFFFFF;
+  box-sizing: border-box;
+  color: var(--basic-red);
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+}
+
+.address-header {
+  display: inline-block;
+  width: 270px;
+  color: var(--basic-black);
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.user-navigation {
+  display: flex;
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.user-navigation-button {
+  display: inline-block;
+  color: inherit;
+  height: 45px;
+  background: var(--basic-white);
+}
+
+.login-main {
+  width: 121px;
+}
+
+.registration-main {
+  width: 150px;
+}
+
+.user-info {
+  display: grid;
+}
+
+.user-name-main {
+  width: 250px;
+}
+
+.logout-main {
+  width: 49px;
+}
+
+.user-actions {
+  display: flex;
+}
+
+.my-order, .personal-area {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 18px;
+  color: #32425C;
+}
+/*==============================================================================
+
+Навигация
+
+==============================================================================*/
+
+.main-navigation {
+  font-size: 18px;
+  line-height: 24px;
+  width: 940px;
+  background-color: #32425C;
+}
+
+.site-navigation {
+  display: flex;
+  list-style: none;
+
+}
+
+.site-navigation a {
+  display: inline-block;
+  color: var(--basic-white);
+  height: 60px;
+  box-shadow: inset 0px -5px 0px #293449;
+}
+
+.site-navigation a:hover {
+  background: #293449;
+}
+
+.site-navigation a:focus {
+  background: #1D2739;
+  color: rgba(255,255,255,0.5);
+}
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Основное содержание страницы
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+.button {
+  display: inline-block;
+  height: 38px;
+  font-family: "Cuprum", Arial, sans-serif;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.page-catalog {
+  font-family: "PT Sans", Arial, sans-serif;
+}
+
+.catalog-title {
+  font-family: "Cuprum", Arial, sans-serif;
+  display: block;
+  padding: 29px;
+  padding-bottom: 30px;
+  padding-right: auto;
+  background-color: var(--basic-background);
+  width: 940px;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #32425C;
+}
+
+.breadcrumbs {
+  list-style: none;
+  display: flex;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.breadcrumbs a {
+  display: inline-block;
+  height: 18px;
+  color: inherit;
+}
+
+.filter {
+  display: grid;
+  text-transform: uppercase;
+}
+
+.filter h2 {
+  display: block;
+  width: 220px;
+  background-color: #F7F3EC;
+  padding: 10px;
+  padding-left: 18px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.filter legend {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.filter ul {
+  list-style: none;
+  font-size: 15px;
+  line-height: 19px;
+}
+
+.filter-input-checkbox:hover,
+.filter-input-checkbox:focus,
+.filter-input-radio:hover,
+.filter-input-radio:focus {
+  color: #B5B5B5;
+}
+
+.filter button {
+  display: block;
+  width: 220px;
+  background-color: inherit;
+  padding: 10px;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border: 1px solid #E5E5E5;
+  box-sizing: border-box;
+
+}
+
+.catalog {
+  display: grid;
+  width: 700px;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.catalog-list {
+  list-style: none;
+
+}
+
+.catalog-item {
+  display: inline-block;
+  width: 220px;
+  height: 318px;
+  background-color: transparent;
+  border: 1px solid var(--special-light-gray);
+  box-sizing: border-box;
+}
+
+.catalog-item a {
+  color: var(--basic-black);
+}
+
+.catalog-item-title {
+  display: block;
+  width: 185px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.catalog-item-image:hover {
+  opacity: 0;
+}
+
+.catalog-item-old-price {
+  text-decoration-line: line-through;
+  color: #A9A9A9;
+}
+
+.catalog-item-price {
+  display: block;
+  width: 141px;
+  background: var(--basic-red) url("img/red-button.svg") no-repeat 0 0;
+  color: var(--basic-white);
+  padding: 10px;
+  padding-left: 32px;
+}
+
+.add-in-cart, .add-in-wish-list {
+  border:none;
+  border-radius: 2px;
+  width: 135px;
+}
+
+.add-in-cart {
+  background-color: var(--basic-green);
+  box-shadow: inset 0px -3px 0px #367315;
+}
+
+.add-in-wish-list {
+  color: #32425C;
+  background-color: var(--basic-white)
+  border: 3px solid #63A63E;
+}
+
+.index-columns {
+  display:flex;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.index-columns h2 {
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.index-columns p {
+font-family: "PT Sans", Arial, sans-serif;
+font-size: 13px;
+line-height: 24px;
+color: #000000;
+}
+
+.about-company {
+  display: block;
+  width: 480px;
+}
+
+.delivery-services-list {
+  list-style: none;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.contacts {
+  display: block;
+  width: 300px;
+}
+
+.button-about-company {
+  width: 220px;
+}
+
+.button-write-us {
+  width: 300px;
+}
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Футер
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+.main-footer {
+  color: var(--basic-white);
+  background-color: #32425C;
+}
+
+.footer-contant {
+  display: flex;
+}
+
+.conteiner-footer-contacts {
+  display: -inline-block;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.logo-technomart-footer {
+  height: 68px;
+}
+
+.conteiner-footer-navigation {
+  display: inline-block;
+}
+
+.site-navigation-footer {
+  display: flex;
+  list-style: none;
+}
+
+.site-navigation-footer a {
+  display: inline-block;
+  color: inherit;
+}
+
+.site-navigation-footer a:hover {
+  text-decoration-line: underline;
+}
+
+.site-navigation-footer a:active {
+  opacity: 0.5;
+}
+
+.text-gold {
+  color: #FFD180;
+}
+
+.footer-bottom {
+  display: flex;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social ul {
+  display: flex;
+  list-style: none;
+}
+
+.footer-social a {
+  display: inline-block;
+  position: relative;
+  background-color: #212A3A;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 2px;
+}
+
+.footer-social a:hover,
+.footer-social a:active {
+    background-color: var(--basic-red);
+}
+
+.social-vk {
+  display: inline-block;
+  position: absolute;
+  top: 13px;
+  left: 7px;
+}
+
+.social-fb {
+  display: inline-block;
+  position: absolute;
+  top: 9px;
+  left: 14px;
+}
+
+.social-insta {
+  display: inline-block;
+  position: absolute;
+  top: 9px;
+  left: 9px;
+}
+
+.copyright-footer {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.copyright-footer a:hover {
+    text-decoration-line: underline;
+}
+
+.copyright-footer a:active {
+  color: var(--basic-red);
+}
+
+.feedback-footer {
+  display: inline-block;
+  width: 137px;
+}
+
+.dev-by-footer {
+  display: inline-block;
+  width: 98px;
+}
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Модальные окна
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
