@@ -7,6 +7,12 @@
   --basic-white: #ffffff;
   --basic-black: #000000;
 
+  --special-border-lightgreen: #63A63E;
+  --special-border-green: #367315;
+  --special-old-price: #A9A9A9;
+  --special-border-grey: #E5E5E5;
+  --special-lightgrey: #B5B5B5;
+  --special-background-filter: #F7F3EC;
   --special-background-middark: #1D2739;
   --special-background-extradark: #161D29;
   --special-background: #32425C;
@@ -351,7 +357,7 @@ input::-webkit-input-placeholder {color: var(--basic-white);}
 .filter h2 {
   display: block;
   width: 220px;
-  background-color: #F7F3EC;
+  background-color: var(--special-background-filter);
   padding: 10px;
   padding-left: 18px;
   font-style: normal;
@@ -376,7 +382,7 @@ input::-webkit-input-placeholder {color: var(--basic-white);}
 .filter-input-checkbox:focus,
 .filter-input-radio:hover,
 .filter-input-radio:focus {
-  color: #B5B5B5;
+  color: var(--special-lightgrey);
 }
 
 .filter button {
@@ -387,7 +393,7 @@ input::-webkit-input-placeholder {color: var(--basic-white);}
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
-  border: 1px solid #E5E5E5;
+  border: 1px solid var(--special-border-grey);
   box-sizing: border-box;
 
 }
@@ -432,7 +438,7 @@ input::-webkit-input-placeholder {color: var(--basic-white);}
 
 .catalog-item-old-price {
   text-decoration-line: line-through;
-  color: #A9A9A9;
+  color: var(--special-old-price);
 }
 
 .catalog-item-price {
@@ -452,13 +458,13 @@ input::-webkit-input-placeholder {color: var(--basic-white);}
 
 .add-in-cart {
   background-color: var(--basic-green);
-  box-shadow: inset 0px -3px 0px #367315;
+  box-shadow: inset 0px -3px 0px var(--special-border-green);
 }
 
 .add-in-wish-list {
-  color: #32425C;
+  color: var(--special-background);
   background-color: var(--basic-white)
-  border: 3px solid #63A63E;
+  border: 3px solid var(--special-border-lightgreen);
 }
 
 .index-columns {
@@ -517,7 +523,7 @@ color: var(--basic-black);
 
 .main-footer {
   color: var(--basic-white);
-  background-color: #32425C;
+  background-color: var(--special-background);
 }
 
 .footer-contant {
