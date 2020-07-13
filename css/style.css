@@ -998,7 +998,7 @@ button.button-submit:active {
 .catalog-list {
   list-style: none;
   display: grid;
-  grid-template-columns: 220px 220px 220px;
+  grid-template-columns: auto auto auto;
   column-gap: 20px;
   row-gap: 18px;
   padding: 0;
@@ -1010,7 +1010,7 @@ button.button-submit:active {
   grid-template-columns: auto;
   position: relative;
   overflow: hidden;
-  width: 220px;
+  max-width: 220px;
   min-height: 318px;
   background-color: transparent;
   border: 1px solid var(--special-light-gray);
