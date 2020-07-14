@@ -1620,6 +1620,150 @@ margin: 0;
   margin-bottom: 26px;
 }
 
+.services-block-background {
+  background-color: var(--basic-background);
+}
+
+.services-block {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 80px;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  padding-top: 64px;
+  margin-bottom: 72px;
+}
+
+.services-header {
+  grid-column: 1/3;
+  grid-row: 1;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 70px;
+}
+
+.services-header h2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.services-header p, .service-slide p {
+  font-family: "PT Sans", Arial, sans-serif;
+  width: 396px;
+  padding: 0;
+  margin: 0;
+}
+
+.service-input {
+  display: none;
+}
+
+.services-list {
+  list-style: none;
+  position: relative;
+  width: 240px;
+  padding: 0;
+  padding-top: 2px;
+  margin: 0;
+}
+
+.services-list::before {
+  content: url("../img/vertical-shadow.png");
+  position: absolute;
+  top: -47px;
+  right: 0;
+}
+
+.service-label {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--basic-white);
+  padding-left: 22px;
+  padding-top: 13px;
+  min-height: 62px;
+  background-color: var(--special-background);
+  border-top: 1px solid var(--special-light-shodow);
+  border-bottom: 1px solid var(--special-background-dark);
+}
+
+.services-label:hover {
+  background-color: var(--special-background-dark);
+}
+
+.service-input:checked + .service-label {
+  color: var(--special-background);
+  background: var(--basic-white);
+  border-top: 1px solid var(--basic-white);
+  border-bottom: 1px solid var(--basic-white);
+}
+
+.service-slide {
+  grid-column: 2/3;
+  grid-row: 2;
+  display: block;
+  min-width: 620px;
+  min-height: 285px;
+}
+
+.service-slide h3 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  max-width: 300px;
+  margin: 0;
+  margin-bottom: 30px;
+  color: var(--special-background);
+  text-transform: uppercase;
+}
+
+.delivery-slide {
+  background: url("../img/delivery.png") no-repeat 152px 24px;
+}
+
+.guarantee-slide {
+  background: url("../img/guarantee.png") no-repeat 231px 2px;
+}
+
+.credit-slide {
+  background: url("../img/credit.png") no-repeat 155px 0;
+}
+
+.delivery-slide p {
+  width: 313px;
+}
+
+.guarantee-slide p {
+  width: 331px;
+}
+
+.credit-slide p {
+  width: 309px;
+  margin-bottom: 25px;
+}
+
+.credit-slide .button {
+  border:none;
+  border-radius: 2px;
+  width: 200px;
+  margin: 0;
+  padding-top: 10px;
+}
+
+/*
 .services-block {
   font-family: "Cuprum", Arial, sans-serif;
   background-color: var(--basic-background);
@@ -1686,7 +1830,7 @@ margin: 0;
   top: 0;
   left: 320px;
   width: 620px;
-  height: 285px;
+  min-height: 285px;
 }
 
 .service-slide h3 {
@@ -1778,6 +1922,8 @@ label + .service-slide {
 .service-input:checked + label + .service-slide {
   display: block;
 }
+
+*/
 
 .about-company p {
   margin-bottom: 1px;
