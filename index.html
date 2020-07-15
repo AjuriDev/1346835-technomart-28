@@ -5,7 +5,7 @@
     <title>HTML Academy: Техномарт</title>
     <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style-min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body>
@@ -95,11 +95,7 @@
           <div class="new-product visually-hidden">NEW</div>
         </div>
 
-        <div class="popular-slider perforators-popular">
-          <div class="slider-header">
-            <h3>Перфораторы</h3>
-            <p>Настоящие мужские игрушки</p>
-          </div>
+        <div class="popular-slider">
           <div class="slider-arrows">
             <button class="previous-slide" type="button" aria-label="Предыдущий слайд"></button>
             <button class="next-slide" type="button" aria-label="Следующий слайд"></button>
@@ -107,25 +103,22 @@
           <div class="popular-buttons-cotainer">
             <a class="button" href="catalog.html"  aria-label="К каталогу">Открыть каталог</a>
             <div class="slider-dots-bar">
-              <button class="slider-dot slider-dot-on" type="button" aria-label="Перфораторы"></button>
-              <button class="slider-dot" type="button" aria-label="Дрели"></button>
+              <button class="slider-dot dot-perfs slider-dot-on" type="button" aria-label="Перфораторы"></button>
+              <button class="slider-dot dot-drills" type="button" aria-label="Дрели"></button>
             </div>
           </div>
-        </div>
-        <div class="popular-slider drills-popular visually-hidden">
-          <div class="slider-header">
-            <h3>Дрели</h3>
-            <p>Соседям на радость!</p>
+
+          <div class="perforators-popular">
+            <div class="slider-header">
+              <h3>Перфораторы</h3>
+              <p>Настоящие мужские игрушки</p>
+            </div>
           </div>
-          <div class="slider-arrows">
-            <button class="previous-slide" aria-label="Предыдущий слайд"></button>
-            <button class="next-slide slider-dot-on" aria-label="Следующий слайд"></button>
-          </div>
-          <div class="popular-buttons-cotainer">
-            <a class="button" href="catalog.html">Открыть каталог</a>
-            <div class="slider-dots-bar">
-              <button class="slider-dot slider-dot-on" type="button" aria-label="Перфораторы"></button>
-              <button class="slider-dot" type="button" aria-label="Дрели"></button>
+
+          <div class="drills-popular visually-hidden">
+            <div class="slider-header">
+              <h3>Дрели</h3>
+              <p>Соседям на радость!</p>
             </div>
           </div>
         </div>
@@ -412,8 +405,10 @@
               заехав в наш офис:
             </p>
           </div>
-          <a class="map-image" href="https://goo.gl/maps/DcnHNjLHQyVdXokZA" aria-label="Мы на карте"></a>
-          <a class="button button-write-us" href="blank.html" aria-label="Напишите нам">Заблудились? Напишите нам!</a>
+          <a class="map-image" href="https://goo.gl/maps/DcnHNjLHQyVdXokZA" aria-label="Мы на карте">
+            <img src="img/map.jpg" width="300" height="158" alt="Адрес нашей компании">
+          </a>
+          <a class="button button-write-us" href="writeus.html" aria-label="Напишите нам">Заблудились? Напишите нам!</a>
         </div>
       </section>
     </div>
@@ -488,13 +483,13 @@
     </section>
   </footer>
 
-  <section class="modal modal-map visually-hidden">
+  <section class="modal modal-map">
     <h2 class="visually-hidden">Как до нас добраться</h2>
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2393.985833432148!2d30.320193868773806!3d59.93859087224874!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1591715694989!5m2!1sru!2sru" width="943" height="449"  allowfullscreen="" aria-hidden="false" tabindex="0" aria-label="Мы на карте"></iframe>
-    <button class="modal-close" type="button" aria-label="Закрыть"></button>
+    <button class="modal-close map-close" type="button" aria-label="Закрыть"></button>
   </section>
 
-  <section class="modal modal-write-us visually-hidden">
+  <section class="modal modal-write-us">
     <h2 class="visually-hidden">Напишите нам</h2>
     <form action="https://echo.htmlacademy.ru" method="post">
       <div class="modal-form">
@@ -517,8 +512,10 @@
         <button class="button modal-send" type="submit" aria-label="Отправить">Отправить</button>
       </div>
     </form>
-    <button class="modal-close" type="button" aria-label="Закрыть"></button>
+    <button class="modal-close write-us-close" type="button" aria-label="Закрыть"></button>
   </section>
+
+  <script src="js/jscript.js"></script>
 
   </body>
 </html>
