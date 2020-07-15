@@ -5,7 +5,7 @@
     <title>HTML Academy: Техномарт</title>
     <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style-min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body>
@@ -107,8 +107,8 @@
                 <div class="scale">
                   <div class="bar"></div>
                 </div>
-                <div class="toggle toggle-min" tabindex="0"></div>
-                <div class="toggle toggle-max" tabindex="0"></div>
+                <div class="toggle toggle-min" tabindex="0" aria-label="Ползунок нижней границы"></div>
+                <div class="toggle toggle-max" tabindex="0" aria-label="Ползунок верхней границы"></div>
               </div>
               <div class="price-controls">
                 <label class="min-price">
@@ -238,12 +238,14 @@
                 <li>
                   <input class="input-level visually-hidden" type="radio" name="dir" value="up" id="up-dir" checked>
                   <label class="sort-up" for="up-dir">
+                    <span class="visually-hidden">По возрастанию</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path d="M5.5 0L0 10h11z"/></svg>
                   </label>
                 </li>
                 <li>
                   <input class="input-level visually-hidden" type="radio" name="dir" value="down" id="down-dir">
                   <label class="sort-down" for="down-dir">
+                    <span class="visually-hidden">По убыванию</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path d="M5.5 0L0 10h11z"/></svg>
                   </label>
                 </li>
@@ -498,15 +500,17 @@
     </section>
   </footer>
 
-  <section class="modal modal-add-in-cart visually-hidden">
+  <section class="modal modal-add-in-cart">
     <h2>Товар добавлен в корзину!</h2>
 
     <div class="modal-container">
-      <a class="button checkout" href="#" aria-label="Оформить заказ">Оформить заказ</a>
+      <a class="button checkout" href="checkout.html" aria-label="Оформить заказ">Оформить заказ</a>
       <a class="button continue-shopping" href="#" aria-label="Продолжить покупки">Продолжить покупки</a>
     </div>
-    <button class="modal-close" type="button" aria-label="Закрыть"></button>
+    <button class="modal-close add-in-cart-close" type="button" aria-label="Закрыть"></button>
   </section>
+
+  <script src="js/jscript.js"></script>
 
   </body>
 </html>
