@@ -1,4 +1,5 @@
 :root {
+  --basic-lightred: #FF3D4A;
   --basic-red: #EE3643;
   --basic-green: #63A63E;
   --basic-darkgreen: #518534;
@@ -257,6 +258,7 @@ a.product-added {
 }
 
 .wish-list {
+  width: 164px;
   padding-left: 43px;
 }
 
@@ -266,12 +268,13 @@ a.product-added {
 }
 
 .cart {
-  padding-left: 49px;
+  width: 136px;
+  padding-left: 35px;
 }
 
 .cart svg {
   top: 13px;
-  left: 26px;
+  left: 12px;
 }
 
 .order {
@@ -1055,6 +1058,7 @@ button.button-submit:active {
 }
 
 .purchase-bar {
+  /*display: none;*/
   justify-content: flex-start;
   padding-top: 38px;
   box-sizing: border-box;
@@ -1067,6 +1071,10 @@ button.button-submit:active {
 .catalog-item:hover .catalog-item-image {
     z-index: -1;
 }
+
+/*.catalog-item:hover .purchase-bar {
+    display: flex;
+}*/
 
 .price-block {
   display: flex;
@@ -1295,13 +1303,29 @@ a.add-in-wish-list {
 .popular-slider {
   grid-column: 1/3;
   grid-row: 2/4;
+  position: relative;
+  max-width: 620px;
+  padding-top: 122px;
+  background-color: transparent;
 }
 
 .perforators-popular {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
   background: var(--special-lightgrey) url("../img/perforators.jpg") no-repeat;
 }
 
 .drills-popular {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
   background: var(--special-lightgrey) url("../img/drills.jpg") no-repeat;
 }
 
@@ -1730,16 +1754,22 @@ margin: 0;
   text-transform: uppercase;
 }
 
+.guarantee-slide h3 {
+  margin-bottom: 25px;
+}
+
 .delivery-slide {
   background: url("../img/delivery.png") no-repeat 152px 24px;
 }
 
 .guarantee-slide {
-  background: url("../img/guarantee.png") no-repeat 231px 2px;
+  width: 628px;
+  background: url("../img/guarantee.png") no-repeat 239px 0;
 }
 
 .credit-slide {
-  background: url("../img/credit.png") no-repeat 155px 0;
+  width: 630px;
+  background: url("../img/credit.png") no-repeat 165px 0;
 }
 
 .delivery-slide p {
@@ -1758,9 +1788,10 @@ margin: 0;
 .credit-slide .button {
   border:none;
   border-radius: 2px;
-  width: 200px;
+  width: 195px;
   margin: 0;
   padding-top: 10px;
+  background-color: var(--basic-lightred);
 }
 
 /*
@@ -1984,11 +2015,10 @@ label + .service-slide {
 }
 
 .map-image {
-  display: block;
-  width: 300px;
   height: 158px;
+  padding: 0;
+  margin: 0;
   margin-bottom: 25px;
-  background: var(--basic-greylight) url("../img/map.jpg") no-repeat;
 }
 
 .button-about-company {
@@ -2183,7 +2213,7 @@ label + .service-slide {
 
 .modal {
   position: fixed;
-  display: block;
+  display: none;
   box-sizing: border-box;
   top: 0;
   right: 0;
@@ -2346,4 +2376,59 @@ label + .service-slide {
 .continue-shopping:active {
   background-color: var(--basic-white);
   border: 1px solid var(--special-border-grey);
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Анимации
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
